@@ -13,6 +13,7 @@ class Register extends Component {
       email: "",
       password: "",
       password2: "",
+      secretCode: "",
       errors: {},
     };
     this.onChange = this.onChange.bind(this);
@@ -46,6 +47,7 @@ class Register extends Component {
       email: this.state.email,
       password: this.state.password,
       passwordCfm: this.state.password2,
+      secretCode: this.state.secretCode
     };
 
     this.props.registerUser(userData);
@@ -124,7 +126,22 @@ class Register extends Component {
                     icon="fa fa-lock"
                     value={this.state.password2}
                     onChange={this.onChange}
-                    error={errors.password2}
+                    error={errors.passwordCfm}
+                  />
+                </div>
+              </div>
+
+              <div className="col-lg-12 no-pdd">
+                <div className="sn-field">
+                  <LoginForm
+                    label="Mã giáo viên"
+                    name="secretCode"
+                    type="password"
+                    placeholder="Mã giáo viên (Optional)"
+                    icon="fa fa-lock"
+                    value={this.state.secretCode}
+                    onChange={this.onChange}
+                    error={errors.secretCode}
                   />
                 </div>
               </div>
