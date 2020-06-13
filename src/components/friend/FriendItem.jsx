@@ -37,7 +37,7 @@ class FriendItem extends Component {
             buttonType = (
                 <ul>
                     <li><a href="#!" className="hire-us" onClick={this.onRemoveFriend.bind(this, friend._id)}>Hủy kết bạn</a></li>
-                    <li><a href="#!" className="message-us" onClick={this.onCreateRoom.bind(this, friend._id)}><i className="fa fa-envelope"></i></a></li>
+                    <li><a href="/chat" className="message-us" onClick={this.onCreateRoom.bind(this, friend._id)}><i className="fa fa-envelope"></i></a></li>
                 </ul>
             )
         } else if (type === 'sent') {
